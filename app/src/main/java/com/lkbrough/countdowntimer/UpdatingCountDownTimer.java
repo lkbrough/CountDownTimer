@@ -25,7 +25,7 @@ public class UpdatingCountDownTimer extends CountDownTimer {
 
     @Override
     public void onFinish() { // called when there's no more time to tick
-        timerDisplay.setText("0"); // if we don't set it to 0 at the end it doesn't actually reach zero. Comes from super class.
-        progress.setProgress(0); // ditto
+        if(timerDisplay != null) { timerDisplay.setText("0"); } // if we don't set it to 0 at the end it doesn't actually reach zero. Comes from super class.
+        if(progress != null) { progress.setProgress(0); } // ditto
     }
 }
